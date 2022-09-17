@@ -62,7 +62,7 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
     switch (get_highest_layer(layer_state)) {
         case 0:
             // main layer, volume
-            if (clockwise) {
+            if (!clockwise) {
                 tap_code(KC_VOLU);
             } else {
                 tap_code(KC_VOLD);
